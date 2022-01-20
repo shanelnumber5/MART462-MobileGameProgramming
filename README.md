@@ -1,2 +1,2 @@
 # MART462-MobileGameProgramming
- This is where I will keep my homework.
+ Repository for my Mobile Game Programming homework.
