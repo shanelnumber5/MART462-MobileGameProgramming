@@ -1,4 +1,4 @@
-# Assignment 1 ReadMe
+# Assignment 1 
 
 ## Role in Class Project
 
@@ -10,4 +10,4 @@ I would be really interested in being a part of the UI/UX design team.  My compu
 
 ## Pros and Cons of Bubble
 
-Bubble was a lot like using Wordpress.  Even though it advertised as being “coding free” you still need quite a bit of knowledge in coding to get it to function correctly.  Some of the obvious pros to a program like Bubble is the designs stay contemporary, it is mobile friendly, and safe.  Some of the downsides are you don’t get the uniqueness of making each step from scratch and you are stuck with the Bubble watermark throughout your application.   
+Bubble was a lot like using Wordpress.  Even though it advertised as being “coding free” you still need quite a bit of knowledge in coding to get it to function correctly.  Some of the obvious pros to a program like Bubble is the designs stay contemporary, it is mobile friendly, and safe.  Some of the downsides are you don’t get the uniqueness of making each step from scratch and you are stuck with the Bubble watermark throughout your application.
