@@ -31,7 +31,7 @@ physics.addBody( balloon, "dynamic", { radius = 50, bounce = 0.2 } )
 balloon:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
 
 local function pushBalloon()
-	balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
+balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
 end
 
 balloon:addEventListener( "tap", pushBalloon )
@@ -50,7 +50,7 @@ physics.addBody( balloon, "dynamic", { radius = 50, bounce = 0.2 } )
 balloon:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
 
 local function pushBalloon()
-	balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
+balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
 end
 
 balloon:addEventListener( "tap", pushBalloon )
@@ -65,7 +65,7 @@ physics.addBody( balloon, "dynamic", { radius = 50, bounce = 0.2 } )
 balloon:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
 
 local function pushBalloon()
-	balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
+balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
 end
 
 balloon:addEventListener( "tap", pushBalloon )
@@ -84,7 +84,7 @@ physics.addBody( balloon, "dynamic", { radius = 50, bounce = 0.2 } )
 balloon:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
 
 local function pushBalloon()
-	balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
+balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
 end
 
 balloon:addEventListener( "tap", pushBalloon )
@@ -100,10 +100,7 @@ platform.x = display.contentCenterX
 platform.y = display.contentHeight + 25
 
 local function pushBalloon()
-	balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
+balloon:applyLinearImpulse( 0, 0.75, balloon.x, balloon.y )
 end
 
 balloon:addEventListener( "tap", pushBalloon )
-
-
-
