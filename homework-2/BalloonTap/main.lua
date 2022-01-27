@@ -23,56 +23,45 @@ local platform = display.newImageRect( "./images/platform2.png", 350, 80 )
 platform.x = display.contentCenterX
 platform.y = display.contentHeight -0.8
 
+local balloonpurple = display.newImageRect( "./images/balloon1.png", 100, 100 )
+balloonpurple.x = display.contentCenterX - 5
+balloonpurple.y = display.contentCenterY - 400
+balloonpurple.alpha = 0.7
+
+physics.addBody( platform, "static" )
+physics.addBody( balloonpurple, "dynamic", { radius = 50, bounce = 0.2 } )
+balloonpurple:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
+balloonpurple.myName = "firstballoon"
+
 local needle = display.newImageRect( "./images/needle.png", 15, 100 )
-needle.x = display.contentCenterX + 25
+needle.x = display.contentCenterX + 50
 needle.y = display.contentHeight - 485
 
 physics.addBody( needle, "static" )
 needle.myName = "needle"
 
-local balloonpurple = display.newImageRect( "./images/balloon1.png", 100, 100 )
-balloonpurple.x = display.contentCenterX - 5
-balloonpurple.y = display.contentCenterY - 400
-balloonpurple.alpha = 0.7
-
-physics.addBody( platform, "static" )
-physics.addBody( balloonpurple, "dynamic", { radius = 50, bounce = 0.2 } )
-balloonpurple:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
-balloonpurple.myName = "firstballoon"
-
 local function pushBalloonpurple()
-    balloonpurple:applyLinearImpulse( 0, -0.25, balloonpurple.x, balloonpurple.y )
+    balloonpurple:applyLinearImpulse( -0.01, -0.25, balloonpurple.x, balloonpurple.y )
     end
 
     balloonpurple:addEventListener( "tap", pushBalloonpurple )
-
-local balloonpurple = display.newImageRect( "./images/balloon1.png", 100, 100 )
-balloonpurple.x = display.contentCenterX - 5
-balloonpurple.y = display.contentCenterY - 400
-balloonpurple.alpha = 0.7
-
-physics.addBody( platform, "static" )
-physics.addBody( balloonpurple, "dynamic", { radius = 50, bounce = 0.2 } )
-balloonpurple:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
-balloonpurple.myName = "firstballoon"
 
 local function onCollision(event)
 
     if ( event.phase == "began" ) then
 
-        local balloonpurple = event.object1
-        local needle = event.object2
+        firstballoon = event.object1
+        needle = event.object2
     end
 end
 
 if ( ( balloonpurple.myName == "firstballoon" and needle.myName == "needle" ) or
 ( balloonpurple.myName == "needle" and needle.myName == "firstballoon" ) )
 then
-    display.remove( balloonpurple )
-
-
-    Runtime:addEventListener( "collision", onCollision )
+    display.remove( firstballoon )
 end
+
+Runtime:addEventListener( "collision", onCollision )
 
 local platform = display.newImageRect( "./images/platform.png", 20, 2000 )
 platform.x = display.contentCenterX + 170
@@ -89,7 +78,7 @@ balloonred:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
 balloonred.myName = "secondballoon"
 
 local function pushBalloonred()
-balloonred:applyLinearImpulse( 0, -0.25, balloonred.x, balloonred.y )
+balloonred:applyLinearImpulse( -0.01, -0.25, balloonred.x, balloonred.y )
 end
 
 balloonred:addEventListener( "tap", pushBalloonred )
@@ -109,7 +98,7 @@ balloonblue:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
 balloonblue.myName = "thirdballoon"
 
 local function pushBalloonblue()
-balloonblue:applyLinearImpulse( 0, -0.25, balloonblue.x, balloonblue.y )
+balloonblue:applyLinearImpulse( -0.01, -0.25, balloonblue.x, balloonblue.y )
 end
 
 balloonblue:addEventListener( "tap", pushBalloonblue )
@@ -125,7 +114,7 @@ balloongreen:applyLinearImpulse("./images/balloon4.png", 0.005, 0.00025 )
 balloongreen.myName = "fourthballoon"
 
 local function pushBalloongreen()
-balloongreen:applyLinearImpulse( 0, -0.25, balloongreen.x, balloongreen.y )
+balloongreen:applyLinearImpulse( -0.01, -0.25, balloongreen.x, balloongreen.y )
 end
 
 balloongreen:addEventListener( "tap", pushBalloongreen )
