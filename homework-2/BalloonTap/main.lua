@@ -38,6 +38,24 @@ end
 
 balloonpurple:addEventListener( "tap", pushBalloonpurple )
 
+local function onCollision(pop)
+
+    if ( pop.phase == "began" ) then
+
+        local firstballoon = pop.object1
+        local needle = pop.object2
+    end
+end
+
+if ( ( balloonpurple.myName == "firstballoon" and needle.myName == "needle" ) or
+( balloonpurple.myName == "needle" and needle.myName == "firstballoon" ) )
+then
+    display.remove( firstballoon )
+
+
+Runtime:addEventListener( "collision", onCollision )
+end
+
 local platform = display.newImageRect( "./images/platform.png", 10, 2000 )
 platform.x = display.contentCenterX - 170
 platform.y = display.contentHeight - 25
@@ -78,6 +96,14 @@ local platform = display.newImageRect( "./images/platform.png", 10, 2000 )
 platform.x = display.contentCenterX + 170
 platform.y = display.contentHeight - 25
 
+local platform = display.newImageRect( "./images/platform2.png", 350, 80 )
+platform.x = display.contentCenterX
+platform.y = display.contentHeight - 0.5
+
+local platform = display.newImageRect( "./images/platform2.png", 350, 50 )
+platform.x = display.contentCenterX
+platform.y = display.contentHeight + 25
+
 local balloongreen = display.newImageRect( "./images/balloon4.png", 90, 90 )
 balloongreen.x = display.contentCenterX - 8
 balloongreen.y = display.contentCenterY - 450
@@ -93,14 +119,3 @@ balloongreen:applyLinearImpulse( 0, 0.75, balloongreen.x, balloongreen.y )
 end
 
 balloongreen:addEventListener( "tap", pushBalloongreen )
-
-local platform = display.newImageRect( "./images/platform2.png", 350, 80 )
-platform.x = display.contentCenterX
-platform.y = display.contentHeight - 0.5
-
-local platform = display.newImageRect( "./images/platform2.png", 350, 50 )
-platform.x = display.contentCenterX
-platform.y = display.contentHeight + 25
-
-
-
