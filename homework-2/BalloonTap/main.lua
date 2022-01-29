@@ -63,6 +63,12 @@ end
 
 Runtime:addEventListener( "collision", onCollision )
 
+local function popBallooon()
+needle.addEventListener( 'tap', popBallooon )
+end
+
+display.remove( firstballoon )
+
 local platform = display.newImageRect( "./images/platform.png", 20, 2000 )
 platform.x = display.contentCenterX + 170
 platform.y = display.contentHeight - 25
