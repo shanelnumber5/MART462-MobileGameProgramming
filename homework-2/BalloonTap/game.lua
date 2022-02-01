@@ -24,14 +24,14 @@ local sheetOptions =
             height = 85
         },
         {   -- 2) balloon 2
-            x = 0,
-            y = 85,
+            x = 75,
+            y = 95,
             width = 90,
             height = 83
         },
         {   -- 3) balloon 3
-            x = 0,
-            y = 168,
+            x = 75,
+            y = 178,
             width = 100,
             height = 97
         },
@@ -68,6 +68,7 @@ local mainGroup
 local uiGroup
 
 local explosionSound
+local catSound
 local fireSound
 local musicTrack
 
@@ -229,8 +230,8 @@ local function onCollision( event )
 			if ( died == false ) then
 				died = true
 
-				-- Play explosion sound!
-				audio.play( explosionSound )
+				-- Play cat sound!
+				audio.play( catSound )
 
 				-- Update lives
 				lives = lives - 1
@@ -290,6 +291,7 @@ function scene:create( event )
 	cat:addEventListener( "touch", dragCat )
 
 	explosionSound = audio.loadSound( "./audio/explosion.wav" )
+	catSound = audio.loadSound( "./audio/cat.wav" )
 	fireSound = audio.loadSound( "./audio/fire.wav" )
 	musicTrack = audio.loadStream( "./audio/80s-Space-Game_Looping.wav" )
 end
@@ -343,6 +345,7 @@ function scene:destroy( event )
 	-- Code here runs prior to the removal of scene's view
 	-- Dispose audio!
 	audio.dispose( explosionSound )
+	audio.dispose( catSound )
 	audio.dispose( fireSound )
 	audio.dispose( musicTrack )
 end
