@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="Shanel Locke Assignment 6">
+    <meta name="author" content="Shanel Locke">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <link rel="icon" href="./assets/images/pixel.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/fonts.css" />
+    <script type="text/javascript" src="./libraries/jquery.js"></script>
+
+    <script type="text/javascript">
+        $.getJSON("http://mart462.silverleaf-consulting.com/index_shanelistheBest.php?callback=?",
+            function(result) {
+                var object = JSON.parse(JSON.stringify(result));
+
+                document.getElementById("finalInfo").innerHTML = result.name + "<br>" + result.name2 + "<br>" + result.name3 + "<br>" + result.name4 + "<br>" + result.name5
+            });
+    </script>
+
+</head>
+
+<body>
+    <!-- Simulate a smartphone / tablet look -->
+    <div class="mobile-container">
+        <div class="container">
+            <marquee class="GeneratedMarquee" direction="up" scrollamount="7" behavior="scroll">Star Wars</marquee>
+            <div>
+                <h2>Star Wars Characters</h2>
+                <div class="row">
+                    <div class="column">
+                        <p id="finalInfo">
+                        </p>
+                    </div>
+                    <div class="column"> <img src="./assets/images/baby.gif" alt="Cute Baby Yoda Gif"></div>
+                </div>
+                <div>
+                    <img src="./assets/images/background.jpg" alt="Epic Star Wars Photo" style="width:100%;">
+                </div>
+</body>
+
+</html>

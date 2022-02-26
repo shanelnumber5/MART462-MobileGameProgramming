@@ -1,0 +1,45 @@
+body {
+    width: 100%;
+    background-color: black;
+    padding: 3em;
+    display: flex;
+}
+
+.container {
+    border-style: solid;
+    background-color: #DAD9D0;
+    padding: 3em;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.row {
+    display: flex;
+    padding: 3em;
+}
+
+.column {
+    flex: 50%;
+    text-align: center;
+}
+
+.GeneratedMarquee {
+    font-family: 'Starjedi';
+    font-size: 100px;
+    text-align: center;
+    line-height: 1em;
+    color: #e99d04;
+    background-color: #050505;
+    padding: 1em;
+}
+
+
+/* Use a media query to add a break point at 1200px: */
+
+@media screen and (max-width: 1200px) {
+    .body {
+        width: 100%;
+    }
+}
