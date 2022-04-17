@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Image based tracking AR.js demo</title>
+    <!-- import aframe and then ar.js with image tracking / location based features -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <a-scene>
+        <a-assets timeout="30000">
+            
+            <a-asset-item id="corey"
+                img src="./corey.glb">
+            </a-asset-item>
+            
+            
+        </a-assets>
+
+        <a-camera position="0 1.2 0"></a-camera>
+
+        <!-- 2D environment omitted for simplicity -->
+
+        <a-entity id="slipknot" position="0 0 -.5" scale=".9">
+            <a-entity position="-0.01 1.25 0" rotation="0 -10 0" gltf-model="#corey" animation-mixer
+                shadow="cast: true; receive: false"></a-entity>
+        </a-entity>
+
+        <!-- Lights configuration omitted for simplicity -->
+    </a-scene>
+    </body>
+
+</html>
